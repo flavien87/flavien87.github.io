@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos de moi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .topnav {
+      background-color: #121212;
+      overflow: hidden;
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .topnav a:hover {
+      background-color: #666;
+      color: white;
+    }
+    .topnav a.active {
+      background-color: #1a73e8;
+      color: white;
+    }
+    .content {
+      padding: 20px;
+    }
+    .about-info {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .about-info img {
+      border-radius: 50%;
+    }
+    .about-info:nth-child(1) {
+      background-color: #1a1a1a;
+    }
+    .about-info:nth-child(2) {
+      background-color: #2a2a2a;
+    }
+    .about-info:nth-child(3) {
+      background-color: #3a3a3a;
+    }
+    .about-info:nth-child(4) {
+      background-color: #4a4a4a;
+    }
+    .about-info.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .about-info:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+    .about-info p {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Accueil</a>
+    <a class="active" href="about.html">Qui suis-je ?</a>
+    <a href="projets.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="content">
+    <div class="about-info">
+      <h2>À propos de moi</h2>
+      <p>Bienvenue sur ma page personnelle.</p>
+    </div>
+    <div class="about-info">
+      <h2>Introduction</h2>
+      <p>Je m'appelle Flavien Latrasse Chevalier, j'ai 19 ans et je suis titulaire d’un baccalauréat technologique. Passionné par l’informatique, j’ai fondé ma propre micro-entreprise dédiée au développement et aux solutions numériques. Mon objectif est de créer des projets sur mesure qui répondent aux besoins de mes clients tout en relevant des défis techniques stimulants.</p>
+    </div>
+    <div class="about-info">
+      <h2>Mon Cursus</h2>
+      <p>Étudiant en première année d’ingénierie informatique à Epitech, une école spécialisée dans les technologies et l’innovation, je suis passionné par l'informatique. Après un baccalauréat technologique, j’ai choisi de me consacrer à l’apprentissage de la programmation et à la résolution de problèmes techniques. Mon objectif est de développer des compétences solides pour créer des solutions informatiques adaptées aux défis de demain.</p>
+    </div>
+    <div class="about-info">
+      <h2>Contact</h2>
+      <p>Email: flavien@example.com</p>
+      <p>Téléphone: +33 6 12 34 56 78</p>
+      <p>Adresse: 123 Rue de l'Informatique, 75000 Paris, France</p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const aboutInfos = document.querySelectorAll('.about-info');
+      aboutInfos.forEach((info, index) => {
+        setTimeout(() => {
+          info.classList.add('visible');
+        }, index * 200);
+      });
+    });
+  </script>
+</body>
+</html>
